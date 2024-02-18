@@ -4,14 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Daisy UI Installation link -->
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind custom classes  -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'pri-color': '#1DD100'
+                        
+                    }
+                }
+            }
+        }
+    </script>
     <title>Smart Ticketing</title>
 </head>
 
 <body>
-    <header>
+    <header class="md:container md:mx-auto">
         <nav>
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
@@ -43,16 +59,44 @@
                 </div>
                 <div class="navbar-end">
                     <!-- <a class="btn">Button</a> -->
-                    <button class="btn btn-outline btn-green-100 text-green-600 border-green-400 bg-green-100 font-bold flex items-center space-x-2 px-7 hover:bg-green-400 hover:text-white text-lg">Bus
+                    <button
+                        class="btn btn-outline btn-green-100 text-green-600 border-green-400 bg-green-100 font-bold flex items-center space-x-2 px-7 hover:bg-green-400 hover:text-white text-lg">Bus
 
-                        <svg class="h-5 w-5 text-green-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="6" cy="17" r="2" />  <circle cx="18" cy="17" r="2" />  <path d="M4 17h-2v-11a1 1 0 0 1 1 -1h14a5 7 0 0 1 5 7v5h-2m-4 0h-8" />  <polyline points="16 5 17.5 12 22 12" />  <line x1="2" y1="10" x2="17" y2="10" />  <line x1="7" y1="5" x2="7" y2="10" />  <line x1="12" y1="5" x2="12" y2="10" /></svg>
-                       
+                        <svg class="h-5 w-5 text-green-500" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" />
+                            <circle cx="6" cy="17" r="2" />
+                            <circle cx="18" cy="17" r="2" />
+                            <path d="M4 17h-2v-11a1 1 0 0 1 1 -1h14a5 7 0 0 1 5 7v5h-2m-4 0h-8" />
+                            <polyline points="16 5 17.5 12 22 12" />
+                            <line x1="2" y1="10" x2="17" y2="10" />
+                            <line x1="7" y1="5" x2="7" y2="10" />
+                            <line x1="12" y1="5" x2="12" y2="10" />
+                        </svg>
+
                     </button>
                 </div>
             </div>
         </nav>
     </header>
-    <main></main>
+    <main class="md:container md:mx-auto">
+        <!-- Banner section -->
+        <section>
+            <div class="hero min-h-screen"
+                style="background-image: url(images/banner.png) ">
+                <!-- <div class="hero-overlay bg-opacity-60"></div> -->
+                <div class="hero-content text-center ">
+                    <div class="max-w-md">
+                        <h1 class="mb-5 text-5xl font-bold text-white">End-to-End Travel with <br> <span class="text-green-600">P Paribahan
+                        </span></h1>
+                        <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
+                            exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                        <button class="btn btn-primary">Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer></footer>
 </body>
 
