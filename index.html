@@ -29,8 +29,9 @@
 
 <body>
     <header class="md:container md:mx-auto">
+        
         <nav>
-            <div class="navbar bg-base-100">
+            <div id="section1" class="navbar bg-base-100">
                 <div class="navbar-start">
                     <div class="dropdown">
                         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -58,9 +59,9 @@
                         <li><a>Search</a></li>
                     </ul>
                 </div>
-                <div class="navbar-end">
+                <div  class="navbar-end">
                     <!-- <a class="btn">Button</a> -->
-                    <button
+                    <button 
                         class="btn btn-outline btn-green-100 text-green-600 border-green-400 bg-green-100 font-bold flex items-center space-x-2 px-7 hover:bg-green-400 hover:text-white text-lg">Bus
 
                         <svg class="h-5 w-5 text-green-500" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
@@ -74,7 +75,7 @@
                             <line x1="7" y1="5" x2="7" y2="10" />
                             <line x1="12" y1="5" x2="12" y2="10" />
                         </svg>
-
+                       
                     </button>
                 </div>
             </div>
@@ -82,7 +83,7 @@
     </header>
     <main class="md:container md:mx-auto">
         <!-- Banner section -->
-        <section>
+        <section id="section1">
             <div class="hero min-h-screen"
                 style="background-image: url(images/banner.png) ">
                 <!-- <div class="hero-overlay bg-opacity-60"></div> -->
@@ -92,7 +93,7 @@
                         </span></h1>
                         <p class="mb-5 text-white">Yes, you can run unit tests and view the results directly within the app. The 
                             integrated testing features allow for a streamlined </p>
-                        <button class="btn btn-primary text-black border-green-400 bg-green-500 font-bold items-center space-x-2 px-7 hover:bg-green-400 hover:text-white text-lg">Buy Tickets</button>
+                        <button id="scrollToSection4" class="btn btn-primary text-black border-green-400 bg-green-500 font-bold items-center space-x-2 px-7 hover:bg-green-400 hover:text-white text-lg">Buy Tickets</button>
                     </div>
                 </div>
             </div>
@@ -145,13 +146,27 @@
           </div>
        </div>
         </section>
-        <section>
-            <h1 text-xxl>PH poribahan</h1>
-        </section>
+        <section id="section4 bg-gray-500">
+            <h1 class="font-bold text-4xl text-center">P.H Paribahan</h1>
+            <p class="mb-5 text-black text-center">The traveling of your choice</p>
+            
+          </section>
     </main>
     <footer>
         <section text-5xl>Footer</section>
     </footer>
+    <!-- Here is the script  -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const button = document.getElementById('scrollToSection4');
+      
+          button.addEventListener('click', function() {
+            const section4 = document.getElementById('section4');
+            section4.scrollIntoView({ behavior: 'smooth' });
+          });
+        });
+      </script>
+      
 </body>
 
 </html>
